@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+</head>
+
+<body>
+    <p>Exercise2:Write a JavaScript program to count and display the items of a dropdown list, in an alert window.</p>
+    <form>
+        <select id="selectItem">
+            <option>GWAPO</option>
+            <option>KAAYO</option>
+            <option>AMONG</option>            
+            <option>TEACHER</option>
+            <option>SA</option>
+            <option>WEB</option>
+            <option>DEVELOPMENT</option>
+            <option>3</option>
+        </select>
+    </form>
+    <br>
+    <br>
+    <input type="button" onclick="getItems()" value="Display Items">
+
+    <script>
+        function getItems() {
+            alert(" The items of a dropdown list are : " + document.getElementById('selectItem').textContent + "The Total Items Of A Dropdown : " + document.getElementById('selectItem').length);
+        }
+
+    </script>
+</body>
+
+</html>

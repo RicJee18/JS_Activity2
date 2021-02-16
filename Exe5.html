@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise5</title>
+</head>
+
+<body>
+    <p>Write a Javascript program to manipulate 3 radio buttons. Have 2 buttons, checkAll and uncheckAll. Upon clicking
+        checkAll, all 3 radio buttons must be checked. For uncheckAll, all 3 radio buttons must be unchecked. If for
+        example, one radio button is checked among the three and then you click either checkAll or uncheckAll, same
+        logic must go through.
+    </p>
+    
+        <input type="radio" id="radiobutton">
+        <input type="radio" id="radiobutton">
+        <input type="radio" id="radiobutton">
+        <br><br>
+
+    <button onclick="checkall()">checkAll</button>
+    <button onclick="uncheckAll()"> uncheckAll</button>
+    <script>
+
+        var x = document.getElementsByTagName('input');
+        console.log(x);
+
+        function checkall() {
+           
+            for (var counter = 0; counter < x.length; counter++) {
+                x[counter].checked = true;
+            }
+        }
+
+        function uncheckAll(){
+        
+             for ( let counter = 0 ; counter < x.length; counter++){
+                  x[counter].checked = false;
+             }
+        }
+    </script>
+
+</body>
+
+</html>

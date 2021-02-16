@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+
+<body>
+    <p>Exercise1: Write a Javascript program wherein you add rows to an existing table in HTML every 
+        time you click a button.
+    </p>
+    <br>
+
+    <table id ="table" border="1">
+        <tr>
+            <td>Row1 Cell1</td>
+            <td>Row1 Cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 Cell1</td>
+            <td>Row2 Cell2</td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" onclick="insert_Row()" value="Insert Row">
+
+    <script>
+        function insert_Row(){
+            var x = document.getElementById('table').insertRow(0);
+            var y = x.insertCell(0);
+            var z = x.insertCell(1);
+            y.innerHTML = "New Cell1";
+            z.innerHTML = "New Cell2";
+        }
+    </script>
+</body>
+
+</html>

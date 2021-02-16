@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4</title>
+</head>
+
+<body>
+    <p>Write a Javascript program wherein you have button1 and button2. Button1 would have text inside displayed as “0”
+        (zero) and button2 would have text inside displayed as “Neutral”. Whenever you click on button1, the text
+        displayed inside button1 is then incremented by 1, and button2 will display “Fizz” if the number in button1 is
+        divisible by 3, “Buzz” if the number in button1 is divisible by 5, and “FizzBuzz” if the number in button1 is
+        divisible by both 3 and 5.Extra Points: Set the color for Fizz as red, Buzz as blue, and Fizzbuzz as the color
+        represented when you mix red and blue.</p>
+
+
+
+    <button id="btn1" onclick="btn1(count++)">0</button>
+    <button id="btn2">NEUTRAL</button>
+
+
+    <script>
+
+        var x = document.getElementById('btn1');
+        var y = document.getElementById('btn2');
+        var count = parseInt(1);
+
+        function btn1(count) {
+            
+            x.innerHTML = count;
+
+            if (count % 3 === 0 && count % 5 === 0) {
+                y.innerHTML = "FIZZBUZZ";
+                y.style.color = "purple";
+            } else if (count % 3 === 0) {
+                y.innerHTML = "FIZZ";
+                y.style.color = "red";
+            } else if (count % 5 === 0) {
+                y.innerHTML = "BUZZ";
+                y.style.color = "blue";
+            } else {
+                y.innerHTML = "NEUTRAL";
+                y.style.color = "black";
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
